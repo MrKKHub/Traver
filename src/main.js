@@ -17,8 +17,11 @@ fastClick.attach(document.body)
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
+  // el: '#app',
   router,
-  components: { App },
-  template: '<App/>'
-})
+  // components: { App },
+  // template: '<App/>'
+  render: c =>{
+      return c(App)
+  }
+}).$mount('#app')
