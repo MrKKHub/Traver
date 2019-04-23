@@ -10,6 +10,7 @@
 
 <script>
 import axios from 'axios'
+import {mapState} from 'vuex'
 import HomeHeader from './components/header'
 import HomeSwiper from './components/Swiper'
 import HomeIcons from './components/Icons'
@@ -19,6 +20,7 @@ export default {
     name:'Home',
     data(){
         return{
+            lastCity:'',
             swiperList:[],
             iconList:[],
             weekendList:[],
@@ -34,7 +36,7 @@ export default {
     },
     methods:{
         getHomeInfo(){
-            axios.get('/api/index.json')
+            axios.get('/api/index.json?city='+this.city )
             .then(this.getHomeInfoSuccess)
         },
         getHomeInfoSuccess(res){
@@ -48,8 +50,20 @@ export default {
             }
         }
     },
+    computed:{
+        ...mapState(['city'])
+    },
     mounted(){
+        this.lastCity = this.city
         this.getHomeInfo()
+    },
+    activated(){
+        // 当使用keepalive以后 会多出这个生命周期函数
+        // 当页面重新显示的时候 会执行
+        if(this.lastCity !== this.city){
+            this.lastCity = this.city
+            this.getHomeInfo()
+        }
     }
 }
 </script>
