@@ -5,7 +5,12 @@
     </div>
     <div class="search-content" ref="search" v-show="keyworlds">
       <ul>
-        <li class="search-item border-bottom" v-for="item of list" :key="item.id">{{item.name}}</li>
+        <li
+          class="search-item border-bottom"
+          v-for="item of list"
+          :key="item.id"
+          @click="handleCityClick(item.name)"
+        >{{item.name}}</li>
         <li class="search-item border-bottom" v-show="noData">很遗憾,没有找到匹配城市</li>
       </ul>
     </div>
@@ -13,7 +18,8 @@
 </template>
 
 <script>
-import Bscroll from "better-scroll";
+import Bscroll from "better-scroll"
+import {mapState,mapMutations} from 'vuex'
 export default {
   name: "CitySearch",
   props: {
@@ -25,6 +31,16 @@ export default {
       timer: null,
       list: []
     };
+  },
+    methods: {
+    handleCityClick(city) {
+    //   this.$store.commit("changeCity", city)
+    this.changeCity(city)
+      this.$router.push('/')
+    // console.log('111')
+    // 链式编程 直接在这添加路由跳转
+    },
+     ...mapMutations(['changeCity'])
   },
   watch: {
     keyworlds() {
@@ -53,14 +69,14 @@ export default {
       }, 16);
     }
   },
-  computed:{
-      noData(){
-              return !this.list.length
-      }
+  computed: {
+    noData() {
+      return !this.list.length;
+    }
   },
   mounted() {
     this.scroll = new Bscroll(this.$refs.search);
-  }
+  },
 };
 </script>
 
