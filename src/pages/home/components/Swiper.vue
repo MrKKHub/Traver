@@ -35,13 +35,10 @@ export default {
 .wrapper >>> .swiper-pagination-bullet-active {
   background-color: #fff;
 }
-.wrapper >>> .swiper-pagination-bullets{
-  bottom 18px
-}
 .wrapper {
   width: 100%;
   height: 0;
-  padding-bottom: 27%;
+  padding-bottom: 30%;
   overflow: hidden;
 
   .swiper-img {
