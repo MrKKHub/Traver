@@ -17,36 +17,12 @@
 <script>
 export default {
     name:'HomeRecommend',
+    props:{
+        recommendList:Array
+    },
     data(){
         return{
-            recommendList:[
-                {
-                    id:'0001',
-                    imgUrl:"http://img1.qunarzz.com/sight/p0/1501/87/9dcb13572c70d3a2aae83b44121db72b.water.jpg_200x200_f25b262d.jpg",
-                    title:'大连圣亚海洋世界',
-                    desc:'浪漫大连首站,浪漫的海洋主题乐园'
-                },
-                                {
-                    id:'0002',
-                    imgUrl:"http://img1.qunarzz.com/sight/p0/1501/87/9dcb13572c70d3a2aae83b44121db72b.water.jpg_200x200_f25b262d.jpg",
-                    title:'大连圣亚海洋世界',
-                    desc:'浪漫大连首站,浪漫的海洋主题乐园'
-
-                },
-                                {
-                    id:'0003',
-                    imgUrl:"http://img1.qunarzz.com/sight/p0/1501/87/9dcb13572c70d3a2aae83b44121db72b.water.jpg_200x200_f25b262d.jpg",
-                    title:'大连圣亚海洋世界',
-                    desc:'浪漫大连首站,浪漫的海洋主题乐园'
-                },
-                                {
-                    id:'0004',
-                    imgUrl:"http://img1.qunarzz.com/sight/p0/1501/87/9dcb13572c70d3a2aae83b44121db72b.water.jpg_200x200_f25b262d.jpg",
-                    title:'大连圣亚海洋世界',
-                    desc:'浪漫大连首站,浪漫的海洋主题乐园'
-                },
-
-            ]
+           
         }
     }
 

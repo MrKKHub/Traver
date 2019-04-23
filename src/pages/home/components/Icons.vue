@@ -15,74 +15,15 @@
 <script>
 export default {
   name: "HomeIcons",
+  props:{
+    iconList:Array
+  },
   data() {
     return {
         swiperOption: {
         pagination: ".swiper-pagination",
         loop:false
       },
-      iconList: [
-        {
-          id: "0001",
-          imgUrl:
-            "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
-          desc: "景点门票"
-        },
-        {
-          id: "0002",
-          imgUrl:
-            "http://img1.qunarzz.com/piao/fusion/1803/3e/86314b2af03b7502.png",
-          desc: "水上玩乐"
-        },
-        {
-          id: "0003",
-          imgUrl:
-            "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/a40ee278d67000f2a29d2e20f6a029b3.png",
-          desc: "自然风光"
-        },
-        {
-          id: "0004",
-          imgUrl:
-            "http://img1.qunarzz.com/piao/fusion/1803/f5/a963333e1fa802.png",
-          desc: "当地好玩"
-        },
-        {
-          id: "0005",
-          imgUrl:
-            "http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png",
-          desc: "九江必游"
-        },
-        {
-          id: "0006",
-          imgUrl:
-            "http://img1.qunarzz.com/piao/fusion/1803/20/831d62d2e1c7be02.png",
-          desc: "名胜古迹"
-        },
-        {
-          id: "0007",
-          imgUrl:
-            "http://img1.qunarzz.com/piao/fusion/1803/ab/6f7d6e44963c9302.png",
-          desc: "泡温泉"
-        },
-        {
-          id: "0008",
-          imgUrl:
-            "http://img1.qunarzz.com/piao/fusion/1803/50/26ffa31b56646402.png",
-          desc: "亲子游"
-        },
-        {
-          id: "0009",
-          imgUrl:
-            "http://img1.qunarzz.com/piao/fusion/1803/ec/0e1e0238e24ba02.png",
-          desc: "婺源"
-        },
-        {
-          id: "0010",
-          imgUrl:
-            "http://img1.qunarzz.com/piao/fusion/1803/80/416c6ab3368d1f02.png",
-          desc: "全部玩乐"
-        }
-      ]
     };
   },
   computed: {

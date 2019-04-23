@@ -2,7 +2,7 @@
   <div>
     <div class="title">周末去哪儿</div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+      <li class="item border-bottom" v-for="item of weekendList" :key="item.id">
         <div class="item-img-wrapper">
           <img class="item-img" :src="item.imgUrl" alt>
         </div>
@@ -17,38 +17,11 @@
 <script>
 export default {
   name: "HomeWeekend",
+  props:{
+    weekendList:Array
+  },
   data() {
     return {
-      recommendList: [
-        {
-          id: "0001",
-          imgUrl:
-            "http://img1.qunarzz.com/sight/source/1606/44/19689f8a01f5b2.jpg_r_640x214_7959e855.jpg",
-          title: "大连圣亚海洋世界",
-          desc: "浪漫大连首站,浪漫的海洋主题乐园"
-        },
-        {
-          id: "0002",
-          imgUrl:
-            "http://img1.qunarzz.com/sight/source/1606/44/19689f8a01f5b2.jpg_r_640x214_7959e855.jpg",
-          title: "大连圣亚海洋世界",
-          desc: "浪漫大连首站,浪漫的海洋主题乐园"
-        },
-        {
-          id: "0003",
-          imgUrl:
-            "http://img1.qunarzz.com/sight/source/1606/44/19689f8a01f5b2.jpg_r_640x214_7959e855.jpg",
-          title: "大连圣亚海洋世界",
-          desc: "浪漫大连首站,浪漫的海洋主题乐园"
-        },
-        {
-          id: "0004",
-          imgUrl:
-            "http://img1.qunarzz.com/sight/source/1606/44/19689f8a01f5b2.jpg_r_640x214_7959e855.jpg",
-          title: "大连圣亚海洋世界",
-          desc: "浪漫大连首站,浪漫的海洋主题乐园"
-        }
-      ]
     };
   }
 };
@@ -58,7 +31,6 @@ export default {
 @import '~styles/mixins.styl';
 
 .title {
-  margin-top: 0.2rem;
   line-height: 0.8rem;
   background-color: #eee;
   text-indent: 0.4rem;
@@ -67,7 +39,7 @@ export default {
 .item-img-wrapper {
   overflow: hidden;
   height: 0;
-  padding-bottom: 33.9%;
+  padding-bottom: 37.09%;
 
   .item-img {
     width: 100%;
