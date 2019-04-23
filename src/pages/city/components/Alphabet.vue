@@ -1,18 +1,18 @@
 <!--字母表组件-->
 <template>
+    <div>
     <ul class="list">
-        <li class="item">A</li>
-        <li class="item">B</li>
-        <li class="item">C</li>
-        <li class="item">D</li>
-        <li class="item">D</li>
-        <li class="item">D</li>
+        <li class="item" v-for="(item,key) of list" :key="key">{{key}}</li>
     </ul>
+    </div>
 </template>
 
 <script>
 export default {
-  name: "CityAlphabet"
+  name: "CityAlphabet",
+  props:{
+      list:Object
+  }
 };
 </script>
 
@@ -26,7 +26,7 @@ export default {
     right 0
     top 1.58rem
     bottom 0
-    width .4rem    
+    width .4rem     
     .item{
         line-height .4rem
         text-align center
