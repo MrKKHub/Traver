@@ -10,7 +10,7 @@
     <router-link to="/city">
       <div class="header-right">
         {{this.city}}
-        <span class="iconfont icon-xiajiantou"></span>
+        <span class="iconfont ">&#xe64a;</span>
       </div>
     </router-link>
   </div>
