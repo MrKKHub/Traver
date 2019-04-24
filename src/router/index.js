@@ -23,5 +23,8 @@ export default new Router({
       name:'Detail',
       component:Detail
     }
-  ]
+  ],
+  scrollBehavior(to,from,savedPosition){
+    return {x:0,y:0}     // 每次路由切换时 让先进入显示的页面 x y 初始位置0
+  }
 })

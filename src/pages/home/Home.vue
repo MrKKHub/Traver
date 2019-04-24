@@ -17,7 +17,7 @@ import HomeIcons from './components/Icons'
 import HomeRecommend from './components/Recommend'
 import HomeWeekend from './components/Weekend'
 export default {
-    name:'Home',
+    name:'Home',  //name有三个用处 1.递归组件时会用到  2.取消缓存 3.开发工具中会显示
     data(){
         return{
             lastCity:'',
